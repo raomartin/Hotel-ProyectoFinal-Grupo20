@@ -19,6 +19,13 @@ public class TipoHabitacion {
     public TipoHabitacion() {
     }
 
+    public TipoHabitacion(int maxPersonas, int cantCamas, TipoCama tipoDeCama, double precio) {
+        this.maxPersonas = maxPersonas;
+        this.cantCamas = cantCamas;
+        this.tipoDeCama = tipoDeCama;
+        this.precio = precio;
+    }
+
     public TipoHabitacion(int codigo, int maxPersonas, int cantCamas, TipoCama tipoDeCama, double precio) {
         this.codigo = codigo;
         this.maxPersonas = maxPersonas;
@@ -69,8 +76,9 @@ public class TipoHabitacion {
 
     @Override
     public String toString() {
-        return (codigo==1 ? "Habitacion Simple, " : codigo==2 ? "Habitacion Doble, " : codigo == 3 ? "Habitacion Triple, " : "Suite de Lujo, ")
-        + "maximo " + maxPersonas + " personas, tiene " + cantCamas + " camas, todas tipo " + tipoDeCama + ". Precio: $ " + precio;
+        return "Codigo: " + codigo + " - " 
+                + (maxPersonas==1 ? "Habitacion Simple, " : maxPersonas==2 ? "Habitacion Doble, " : maxPersonas==3 ? "Habitacion Triple, " : "Suite de Lujo, ")
+                + "maximo " + maxPersonas + " personas, tiene " + cantCamas + " camas, todas tipo " + tipoDeCama + ". Precio: $ " + precio;
     }
     
     
