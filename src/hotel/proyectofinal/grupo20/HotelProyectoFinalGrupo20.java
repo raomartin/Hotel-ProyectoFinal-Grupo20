@@ -73,6 +73,9 @@ public class HotelProyectoFinalGrupo20 {
 //        habData.guardarHabitacion(new Habitacion(false, thd.buscarTipoHabitacion(6)));
 //        habData.guardarHabitacion(new Habitacion(false, thd.buscarTipoHabitacion(7)));
 //        habData.guardarHabitacion(new Habitacion(false, thd.buscarTipoHabitacion(8)));
+
+        System.out.println("sino actualizan se van al horno");
+        
         
         
         
