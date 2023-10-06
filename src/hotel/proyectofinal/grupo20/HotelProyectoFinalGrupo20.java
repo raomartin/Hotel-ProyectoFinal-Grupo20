@@ -13,6 +13,7 @@ import hotel.proyectofinal.grupo20.Entidades.Habitacion;
 import hotel.proyectofinal.grupo20.Entidades.Huesped;
 import hotel.proyectofinal.grupo20.Entidades.TipoCama;
 import hotel.proyectofinal.grupo20.Entidades.TipoHabitacion;
+
 import java.sql.Connection;
 import java.util.List;
 
@@ -28,7 +29,7 @@ public class HotelProyectoFinalGrupo20 {
     public static void main(String[] args) {
         // TODO code application logic here
         
-        //Connection con = Conexion.getConexion();
+        Connection con = Conexion.getConexion();
         
         HuespedData hd = new HuespedData();
 //        hd.guardarHuesped(new Huesped(34771759, "Rao", "Martin", "Av. Siempre viva 123", "martin.rao@hotmail.com", 123456789));
