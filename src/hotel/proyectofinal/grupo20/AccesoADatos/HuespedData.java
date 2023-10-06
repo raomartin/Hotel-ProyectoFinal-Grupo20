@@ -29,25 +29,30 @@ public class HuespedData {
     
     public void guardarHuesped(Huesped huesped){
         
-        String sql = "INSERT INTO huesped (dni, apellido, nombre, domicilio, correo, celular) "
-                + "VALUES (?,?,?,?,?,?)";
-        
-        try {
+        if (buscarHuespedPorDni(huesped.getDni()) == null) {
             
-            PreparedStatement ps = con.prepareStatement(sql);
-            ps.setInt(1, huesped.getDni());
-            ps.setString(2, huesped.getApellido());
-            ps.setString(3, huesped.getNombre());
-            ps.setString(4, huesped.getDomicilio());
-            ps.setString(5, huesped.getCorreo());
-            ps.setInt(6, huesped.getCelular());
-            if(ps.executeUpdate() > 0){
-                JOptionPane.showMessageDialog(null, "HUESPED GUARDADO EXITOSAMENTE");
+            String sql = "INSERT INTO huesped (dni, apellido, nombre, domicilio, correo, celular) "
+                    + "VALUES (?,?,?,?,?,?)";
+
+            try {
+
+                PreparedStatement ps = con.prepareStatement(sql);
+                ps.setInt(1, huesped.getDni());
+                ps.setString(2, huesped.getApellido());
+                ps.setString(3, huesped.getNombre());
+                ps.setString(4, huesped.getDomicilio());
+                ps.setString(5, huesped.getCorreo());
+                ps.setInt(6, huesped.getCelular());
+                if (ps.executeUpdate() > 0) {
+                    JOptionPane.showMessageDialog(null, "HUESPED GUARDADO EXITOSAMENTE");
+                }
+                ps.close();
+
+            } catch (SQLException ex) {
+                JOptionPane.showMessageDialog(null, "ERROR AL ACCEDER EN LA TABLA HUESPED. " + ex.getMessage());
             }
-            ps.close();
-            
-        } catch (SQLException ex) {
-            JOptionPane.showMessageDialog(null, "ERROR AL ACCEDER EN LA TABLA HUESPED. " + ex.getMessage());
+        }else{
+            JOptionPane.showMessageDialog(null, "YA EXISTE EL HUESPED");
         }
     }
     
@@ -75,7 +80,7 @@ public class HuespedData {
         }
     }
     
-    public Huesped buscarHuesoedPorDni(int dni){
+    public Huesped buscarHuespedPorDni(int dni){
         
         String sql = "SELECT apellido, nombre, domicilio, correo, celular "
                 + "FROM huesped WHERE dni=?";

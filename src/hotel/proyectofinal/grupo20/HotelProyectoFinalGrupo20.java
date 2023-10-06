@@ -36,7 +36,7 @@ public class HotelProyectoFinalGrupo20 {
 //        hd.guardarHuesped(new Huesped(38794649, "Schiaverano", "Michelle", "Libertad 123", "Michelle@hotmail.com", 123456789));
 //        hd.guardarHuesped(new Huesped(20622354, "Merlo", "Ruben", "Zapiola 123", "Ruben@hotmail.com", 123456789));
 //        hd.modificarHuesped(new Huesped(34771759, "Rao", "Martin", "Cochabamba 123", "martin@hotmail.com", 123456789));
-//        System.out.println(hd.buscarHuesoedPorDni(34771759));
+//        System.out.println(hd.buscarHuespedPorDni(38794649));
 //        List<Huesped> huespedes = hd.listarHistorialDeHuespedes();
 //        for(Huesped huesped : huespedes){
 //            System.out.println(huesped);
@@ -52,8 +52,7 @@ public class HotelProyectoFinalGrupo20 {
 //        thd.guardarTipoHabitacion(new TipoHabitacion(4, 4, TipoCama.SIMPLE, 36000.00));
 //        thd.guardarTipoHabitacion(new TipoHabitacion(4, 2, TipoCama.KING_SIZE, 30000.00));
 //        System.out.println(thd.buscarTipoHabitacion(2));
-//        thd.cambiarPrecio(2, 17000.00);
-//        thd.cambiarPrecio(new TipoHabitacion(2, 2, 2, TipoCama.SIMPLE, 17500.00));
+//        thd.cambiarPrecio(2, 17500.00);
 //        thd.cambiarPrecio(new TipoHabitacion(4, 2, 1, TipoCama.KING_SIZE, 16500.00));
 //        List<TipoHabitacion> tipos = thd.listarTiposDeHabitaciones();
 //        for(TipoHabitacion th : tipos){
@@ -65,7 +64,15 @@ public class HotelProyectoFinalGrupo20 {
 //        }
         
         HabitacionData habData = new HabitacionData();
-        habData.guardarHabitacion(new Habitacion(false, thd.buscarTipoHabitacion(1)));
+//        habData.guardarHabitacion(new Habitacion(false, thd.buscarTipoHabitacion(1)));
+//        habData.guardarHabitacion(new Habitacion(false, thd.buscarTipoHabitacion(1)));
+//        habData.guardarHabitacion(new Habitacion(false, thd.buscarTipoHabitacion(2)));
+//        habData.guardarHabitacion(new Habitacion(false, thd.buscarTipoHabitacion(3)));
+//        habData.guardarHabitacion(new Habitacion(false, thd.buscarTipoHabitacion(4)));
+//        habData.guardarHabitacion(new Habitacion(false, thd.buscarTipoHabitacion(5)));
+//        habData.guardarHabitacion(new Habitacion(false, thd.buscarTipoHabitacion(6)));
+//        habData.guardarHabitacion(new Habitacion(false, thd.buscarTipoHabitacion(7)));
+//        habData.guardarHabitacion(new Habitacion(false, thd.buscarTipoHabitacion(8)));
         
         
         
