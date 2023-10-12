@@ -134,6 +134,7 @@ public class HuespedData {
         }
         return huespedes;
     }
+    
     //PROBAR listarHuespedesConReserva() CUANDO HAYA RESERVAS
     public List<Huesped> listarHuespedesConReservas(){
         
@@ -154,7 +155,9 @@ public class HuespedData {
                 huesped.setCorreo(rs.getString("correo"));
                 huesped.setCelular(rs.getInt("celular"));
                 
-                huespedes.add(huesped);
+                if(huespedes.contains(huesped) != true){
+                    huespedes.add(huesped);
+                }
             }
             ps.close();
         } catch (SQLException ex) {

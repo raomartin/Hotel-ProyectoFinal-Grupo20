@@ -93,7 +93,7 @@ public class TipoHabitacionData {
         
     }
     
-    public TipoHabitacion buscarTipoHabitacion(int codigo){
+    public TipoHabitacion buscarTipoHabitacionPorCodigo(int codigo){
         
         String sql = "SELECT maxPersonas, cantCamas, tipoCama, precio FROM tipohabitacion "
                 + "WHERE codigo=?";
@@ -120,7 +120,7 @@ public class TipoHabitacionData {
         return tipoHab;
     }
     
-    public void eliminarTipoHabitacion(int codigo){
+    private void eliminarTipoHabitacion(int codigo){
         
         String sql = "DELETE FROM tipohabitacion WHERE codigo=?";
         
